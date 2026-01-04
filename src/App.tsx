@@ -43,7 +43,7 @@ function ScrollManager() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
       <ScrollManager />
       <Routes>
         <Route path="/" element={<HomePage />} />
