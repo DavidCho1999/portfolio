@@ -1,0 +1,104 @@
+import type { Project } from './types.ts';
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    slug: 'climate-analysis',
+    client: 'Office for the next environment',
+    title: 'Climate Analysis',
+    tag: 'EXISTING CONDITION',
+    color: 'bg-gray-200',
+    description: 'Climate analysis and daylight study for the East Side Greenway project. Conducted comprehensive environmental analysis to optimize outdoor comfort and energy efficiency.',
+    role: 'Climate Study',
+    team: 'Office for the Next Environment',
+    duration: '2025 OCT',
+    tools: ['Grasshopper', 'Rhino'],
+    thumbnailImage: '',
+    images: []
+  },
+  {
+    id: 2,
+    slug: 'carbon-analysis',
+    client: 'Office for the next environment',
+    title: 'Carbon Analysis',
+    tag: 'DESIGN BASELINE',
+    color: 'bg-gray-300',
+    description: 'Comprehensive carbon analysis for the Chinatown Connection project. Developed Python and Grasshopper scripts to calculate embodied carbon across different building materials and design scenarios.',
+    role: 'Carbon Study',
+    team: 'Office for the Next Environment',
+    duration: '2025',
+    tools: ['Grasshopper', 'Excel', 'Python'],
+    thumbnailImage: '',
+    images: []
+  },
+  {
+    id: 3,
+    slug: 'carbon-analysis-bim-landscape',
+    client: 'Office for the next environment',
+    title: 'Carbon Analysis / BIM Landscape',
+    tag: '',
+    color: 'bg-gray-200',
+    description: 'BIM-based landscape carbon analysis combining 3D modeling with environmental impact calculations.',
+    role: 'BIM Analyst',
+    team: 'Office for the Next Environment',
+    duration: '2025',
+    tools: ['Rhino', 'Grasshopper', 'Excel'],
+    thumbnailImage: '',
+    images: []
+  },
+  {
+    id: 4,
+    slug: 'pattern-design',
+    client: 'Computational Design Lab',
+    title: 'Pattern Design',
+    tag: '',
+    color: 'bg-gray-300',
+    description: 'Parametric pattern design exploration using computational design methodologies.',
+    role: 'Computational Designer',
+    team: 'Computational Design Lab',
+    duration: '2024',
+    tools: ['Grasshopper', 'Rhino'],
+    thumbnailImage: '',
+    images: []
+  },
+  {
+    id: 5,
+    slug: 'bim-managing-1',
+    client: 'University of Waterloo',
+    title: 'BIM Managing',
+    tag: '',
+    color: 'bg-gray-200',
+    description: 'Building Information Modeling management for University of Waterloo campus projects.',
+    role: 'BIM Manager',
+    team: 'University of Waterloo',
+    duration: '2024',
+    tools: ['Revit', 'Navisworks'],
+    thumbnailImage: '',
+    images: []
+  },
+  {
+    id: 6,
+    slug: 'bim-managing-2',
+    client: 'University of Waterloo',
+    title: 'BIM Managing',
+    tag: '',
+    color: 'bg-gray-300',
+    description: 'Advanced BIM coordination and management for university infrastructure projects.',
+    role: 'BIM Coordinator',
+    team: 'University of Waterloo',
+    duration: '2024',
+    tools: ['Revit', 'BIM 360'],
+    thumbnailImage: '',
+    images: []
+  }
+];
+
+// Helper function to get project by slug
+export const getProjectBySlug = (slug: string): Project | undefined => {
+  return projects.find(project => project.slug === slug);
+};
+
+// Helper function to get all projects
+export const getAllProjects = (): Project[] => {
+  return projects;
+};
