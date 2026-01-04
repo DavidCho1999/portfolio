@@ -20,7 +20,6 @@ import carbon2 from '../assets/projects/carbon_calc/2.png';
 import carbon3 from '../assets/projects/carbon_calc/3.png';
 import carbon4 from '../assets/projects/carbon_calc/4.png';
 import carbon5 from '../assets/projects/carbon_calc/5.png';
-import carbon6 from '../assets/projects/carbon_calc/6.png';
 import carbon7 from '../assets/projects/carbon_calc/7.png';
 import thumbnail3b from '../assets/projects/3b/thumbnail.png';
 import designLabThumbnail from '../assets/projects/desing_lab/thumbnail.png';

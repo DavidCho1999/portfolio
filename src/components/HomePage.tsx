@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { X } from 'lucide-react';
 import ProjectCard from './ProjectCard.tsx';
 import { getAllProjects } from '../data/projects.ts';
 
