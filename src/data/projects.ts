@@ -22,10 +22,30 @@ import carbon4 from '../assets/projects/carbon_calc/4.png';
 import carbon5 from '../assets/projects/carbon_calc/5.png';
 import carbon7 from '../assets/projects/carbon_calc/7.png';
 import thumbnail3b from '../assets/projects/3b/thumbnail.png';
-import designLabThumbnail from '../assets/projects/desing_lab/thumbnail.png';
+import bright3b from '../assets/projects/3b/bright.png';
+import plan3b from '../assets/projects/3b/plan.png';
+import plan1_3b from '../assets/projects/3b/plan1.png';
+import plan2_3b from '../assets/projects/3b/plan2.png';
+import plan3_3b from '../assets/projects/3b/plan3.png';
+import plan4_3b from '../assets/projects/3b/plan4.png';
+import indesign1_3b from '../assets/projects/3b/indesign_images1.png';
+import indesign2_3b from '../assets/projects/3b/indesign_images2.png';
+import indesign3_3b from '../assets/projects/3b/indesign_images3.png';
+import indesign4_3b from '../assets/projects/3b/indesign_images4.png';
+import indesign5_3b from '../assets/projects/3b/indesign_images5.png';
+import designLabThumbnail from '../assets/projects/desing_lab/thumbnail_photoshop.png';
+import designLab1 from '../assets/projects/desing_lab/1.png';
+import designLab2 from '../assets/projects/desing_lab/2.png';
+import designLab3 from '../assets/projects/desing_lab/3.png';
+import designLab4 from '../assets/projects/desing_lab/4.png';
+import designLab5 from '../assets/projects/desing_lab/5.png';
 import uwaterlooLogo from '../assets/projects/University_of_Waterloo/logo.png';
 import multistudioLogo from '../assets/projects/multistudio/logo.png';
-import harrimanThumbnail from '../assets/projects/harriman/thumbnail.png';
+import capstoneThumbnail from '../assets/projects/capstone/Isometric SW.png';
+import harrimanThumbnail from '../assets/projects/harriman/thumbnail_1.png';
+import harriman2Way1 from '../assets/projects/harriman/2WAY_IMAGES.png';
+import harriman2Way2 from '../assets/projects/harriman/2WAY_IMAGES2.png';
+import harriman2Way3 from '../assets/projects/harriman/2WAY_IMAGES3.png';
 
 export const projects: Project[] = [
   {
@@ -43,7 +63,7 @@ Climate Analysis.`,
     3. Organized scripts for everyone’s use`,
     role: 'Climate Study',
     team: 'Office for the Next Environment',
-    duration: '2025 OCT', 
+    duration: '2025 OCT',
     tools: ['Grasshopper', 'Rhino'],
     thumbnailImage: climateImage2,
     images: [
@@ -51,7 +71,7 @@ Climate Analysis.`,
       { src: climateVideo, alt: 'Climate transition video', caption: 'timelapse', type: 'video' },
       { src: climateImage3, alt: 'South East 3D visualization', caption: 'Winter shadow (3 hours)' },
       { src: grasshopper, alt: 'Grasshopper script', caption: 'Grasshopper script for analysis' },
-            {
+      {
         src: heat30,
         alt: 'Heat analysis slideshow',
         caption: 'Sideshow (multiple images will show)',
@@ -98,7 +118,7 @@ Climate Analysis.`,
     id: 3,
     slug: 'carbon-analysis-bim-landscape',
     client: 'Office for the next environment',
-    title: 'Carbon Analysis / BIM Landscape',
+    title: 'Harriman Campus Landscape/Climate Analysis',
     tag: '',
     color: 'bg-gray-200',
     description: 'BIM-based landscape carbon analysis combining 3D modeling with environmental impact calculations.',
@@ -108,55 +128,96 @@ Climate Analysis.`,
     tools: ['Rhino', 'Grasshopper', 'Excel'],
     thumbnailImage: harrimanThumbnail,
     images: [
-      { src: harrimanThumbnail, alt: 'BIM Landscape thumbnail' }
+      { src: harrimanThumbnail, alt: 'Harriman Campus thumbnail' },
+      { src: harriman2Way1, alt: 'Harriman 2-way view 1' },
+      { src: harriman2Way2, alt: 'Harriman 2-way view 2' },
+      { src: harriman2Way3, alt: 'Harriman 2-way view 3' }
     ]
   },
   {
     id: 4,
     slug: 'pattern-design',
-    client: 'Computational Design Lab',
-    title: 'Pattern Design',
+    client: 'Play',
+    title: 'Computational Design Lab',
     tag: '',
     color: 'bg-gray-300',
-    description: 'Parametric pattern design exploration using computational design methodologies.',
+    description: 'Showcasing approx. 30 facade and structural concepts coded in Rhino Grasshopper. This collection blends reference studies with original designs, focusing on parametric optimization for both performance and aesthetics. The goal is to translate these computational methods into real-world architectural projects." (Instagram: https://www.instagram.com/arch_ghs)',
     role: 'Computational Designer',
-    team: 'Computational Design Lab',
+    team: 'Self-Initiated',
     duration: '2024',
     tools: ['Grasshopper', 'Rhino'],
     thumbnailImage: designLabThumbnail,
     images: [
-      { src: designLabThumbnail, alt: 'Design Lab thumbnail' }
+      { src: designLabThumbnail, alt: 'Design Lab thumbnail' },
+      { src: designLab1, alt: 'Design Lab pattern 1' },
+      { src: designLab2, alt: 'Design Lab pattern 2' },
+      { src: designLab3, alt: 'Design Lab pattern 3' },
+      { src: designLab4, alt: 'Design Lab pattern 4' },
+      { src: designLab5, alt: 'Design Lab pattern 5' }
     ]
   },
   {
     id: 8,
     slug: 'project-8',
-    client: 'Harriman',
-    title: 'Project Title 8',
+    client: 'University of Waterloo Studio',
+    title: 'BIM Coordination',
     tag: '',
     color: 'bg-gray-300',
     description: 'Project description goes here.',
-    role: 'Role',
-    team: 'Harriman',
+    role: 'BIM Coordination',
+    team: 'Ahmed Rosli, Jingyu Lu, Gabriel Codina',
     duration: '2024',
-    tools: ['Tool1', 'Tool2'],
+    tools: ['Revit, Rhino inside Revit, D5 Render'],
     thumbnailImage: thumbnail3b,
     images: [
-      { src: thumbnail3b, alt: 'Harriman thumbnail' }
+      {
+        src: thumbnail3b,
+        alt: 'BIM Coordination',
+      },
+      {
+        src: plan1_3b,
+        alt: 'BIM Coordination plans slideshow',
+        type: 'slideshow',
+        slideshow: [plan1_3b, plan2_3b, plan3_3b, plan4_3b],
+        slideshowInterval: 3500,
+        slideshowTransition: 'crossfade',
+        transitionDuration: 800
+      },
+      {
+        src: indesign1_3b,
+        alt: 'InDesign image 1'
+      },
+      {
+        src: indesign2_3b,
+        alt: 'InDesign image 2'
+      },
+      {
+        src: indesign3_3b,
+        alt: 'InDesign image 3'
+      },
+      {
+        src: indesign4_3b,
+        alt: 'InDesign slideshow',
+        type: 'slideshow',
+        slideshow: [indesign4_3b, indesign5_3b],
+        slideshowInterval: 5500,
+        slideshowTransition: 'crossfade',
+        transitionDuration: 800
+      }
     ]
   },
   {
     id: 5,
-    slug: 'bim-managing-1',
+    slug: 'uwaterloo-ra',
     client: 'University of Waterloo',
-    title: 'BIM Managing',
+    title: 'Intern - Research Assistant',
     tag: '',
     color: 'bg-gray-200',
     description: 'Building Information Modeling management for University of Waterloo campus projects.',
     role: 'BIM Manager',
     team: 'University of Waterloo',
-    duration: '2024',
-    tools: ['Revit', 'Navisworks'],
+    duration: '2024 May-Aug / 2025 May-Aug',
+    tools: ['Grasshopper'],
     thumbnailImage: uwaterlooLogo,
     images: [
       { src: uwaterlooLogo, alt: 'University of Waterloo logo' }
@@ -164,31 +225,31 @@ Climate Analysis.`,
   },
   {
     id: 6,
-    slug: 'arcadis-internship',
+    slug: 'arcadis',
     client: 'Arcadis/IBI Group',
-    title: 'High-Rise Residential Intern',
+    title: 'Intern - High rise Residential',
     tag: '',
     color: 'bg-gray-300',
     description: 'Advanced BIM coordination and management for university infrastructure projects.',
-    role: 'BIM Coordinator',
-    team: 'University of Waterloo',
-    duration: '2024',
-    tools: ['Revit', 'BIM 360'],
+    role: 'BIM, computational design',
+    team: 'Arcadis/IBI Group',
+    duration: '2024 Jan-Apr',
+    tools: ['Revit, Grasshopper, Python, Rhino'],
     thumbnailImage: arcadislogo,
     images: [{ src: arcadislogo, alt: 'Arcadis/IBI Group logo' }]
   },
   {
     id: 7,
-    slug: 'project-7',
+    slug: 'multistudio',
     client: 'Multistudio',
-    title: 'Project Title 7',
+    title: 'Intern - Commercial Architecture',
     tag: '',
     color: 'bg-gray-200',
     description: 'Project description goes here.',
-    role: 'Role',
+    role: 'Model making, plan drafting',
     team: 'Multistudio',
-    duration: '2024',
-    tools: ['Tool1', 'Tool2'],
+    duration: '2019 Sep-Dec',
+    tools: ['Revit, Rhino, Bluebeam, AutoCAD'],
     thumbnailImage: multistudioLogo,
     images: [
       { src: multistudioLogo, alt: 'Multistudio logo' }
@@ -196,18 +257,20 @@ Climate Analysis.`,
   },
   {
     id: 9,
-    slug: 'project-9',
-    client: 'Client Name',
-    title: 'Project Title 9',
+    slug: 'capstone',
+    client: 'Capstone Project',
+    title: 'BIM Coordination',
     tag: '',
     color: 'bg-gray-200',
     description: 'Project description goes here.',
     role: 'Role',
-    team: 'Team Name',
+    team: 'Paul Yang, Druthi Padamati, Mithuna Kandasamy',
     duration: '2024',
     tools: ['Tool1', 'Tool2'],
-    thumbnailImage: '',
-    images: []
+    thumbnailImage: capstoneThumbnail,
+    images: [
+      { src: capstoneThumbnail, alt: 'Capstone Isometric View' }
+    ]
   }
 ];
 

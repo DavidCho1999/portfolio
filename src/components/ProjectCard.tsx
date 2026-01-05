@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { Project } from '../data/types.ts';
+import Slideshow from './Slideshow.tsx';
 
 interface ProjectCardProps {
   project: Project;
@@ -11,15 +12,31 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     sessionStorage.setItem('homepageScrollPosition', String(window.scrollY));
   };
 
+  // Check if first image is a slideshow
+  const firstImage = project.images[0];
+  const isSlideshow = firstImage?.type === 'slideshow' && firstImage.slideshow;
+
   return (
     <Link
       to={`/project/${project.slug}`}
       onClick={handleClick}
       className="group cursor-pointer block"
     >
-      {/* Thumbnail Image */}
+      {/* Thumbnail Image or Slideshow */}
       <div className="w-full mb-0 relative overflow-hidden bg-gray-200">
-        {project.thumbnailImage ? (
+        {isSlideshow ? (
+          <>
+            <Slideshow
+              images={firstImage.slideshow!}
+              alt={firstImage.alt}
+              interval={firstImage.slideshowInterval}
+              transition={firstImage.slideshowTransition}
+              transitionDuration={firstImage.transitionDuration}
+            />
+            {/* Hover effect */}
+            <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 pointer-events-none" />
+          </>
+        ) : project.thumbnailImage ? (
           <>
             <img
               src={project.thumbnailImage}

@@ -1,0 +1,62 @@
+/* Custom lightbox styles */
+.yarl__root {
+  --yarl__color_backdrop: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Blur the background/backdrop */
+.yarl__portal {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Constrain the image container to 70% of viewport */
+.yarl__slide {
+  padding: 15vh 15vw !important;
+}
+
+.yarl__slide_image {
+  max-width: 70vw !important;
+  max-height: 70vh !important;
+}
+
+/* Remove all shadows */
+.yarl__slide_image,
+.yarl__container,
+.yarl__slide,
+.yarl__button,
+* {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Hide all zoom controls aggressively */
+.yarl__zoom_controls,
+.yarl__toolbar_button[aria-label*="Zoom"],
+button[aria-label*="Zoom in"],
+button[aria-label*="Zoom out"],
+button[aria-label="Zoom in"],
+button[aria-label="Zoom out"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Style close button as simple X without background */
+.yarl__button {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: black !important;
+  font-size: 32px !important;
+  font-weight: 300 !important;
+  padding: 0 !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.yarl__button:hover {
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 0.7 !important;
+}

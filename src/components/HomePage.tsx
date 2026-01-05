@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Masonry from 'react-masonry-css';
 import ProjectCard from './ProjectCard.tsx';
 import { getAllProjects } from '../data/projects.ts';
 
@@ -65,12 +66,14 @@ const HomePage = () => {
             </div>
 
             {/* links */}
-            <nav className="flex items-center gap-3 pt-2">
+            <nav className="flex items-center gap-3 pt-2 relative z-[100]">
               <div className="relative inline-block">
                 <a
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
+                    setIsEmailModalOpen(false);
+                    setIsLinkedInModalOpen(false);
                     setIsInfoModalOpen(true);
                   }}
                   className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors border-b border-transparent hover:border-blue-600 cursor-pointer"
@@ -87,7 +90,7 @@ const HomePage = () => {
                     <div className="fixed inset-0 z-40" onClick={() => setIsInfoModalOpen(false)} />
 
                     {/* Popup content */}
-                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-80 p-6 z-50">
+                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-80 p-6 z-[50]">
                       {/* Popup content */}
                       <div className="space-y-2 text-sm">
                         <p>
@@ -113,6 +116,8 @@ const HomePage = () => {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
+                    setIsInfoModalOpen(false);
+                    setIsEmailModalOpen(false);
                     setIsLinkedInModalOpen(true);
                   }}
                   className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors border-b border-transparent hover:border-blue-600 cursor-pointer"
@@ -129,7 +134,7 @@ const HomePage = () => {
                     <div className="fixed inset-0 z-40" onClick={() => setIsLinkedInModalOpen(false)} />
 
                     {/* Popup content */}
-                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-fit p-6 z-50">
+                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-fit p-6 z-[101]">
                       {/* Popup content */}
                       <div className="space-y-2 text-sm whitespace-nowrap">
                         <a
@@ -151,6 +156,8 @@ const HomePage = () => {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
+                    setIsInfoModalOpen(false);
+                    setIsLinkedInModalOpen(false);
                     setIsEmailModalOpen(true);
                   }}
                   className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors border-b border-transparent hover:border-blue-600 cursor-pointer"
@@ -167,7 +174,7 @@ const HomePage = () => {
                     <div className="fixed inset-0 z-40" onClick={() => setIsEmailModalOpen(false)} />
 
                     {/* Popup content */}
-                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-fit p-6 z-50">
+                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-fit p-6 z-[101]">
                       {/* Popup content */}
                       <div className="space-y-2 text-sm whitespace-nowrap">
                         <p
@@ -191,11 +198,22 @@ const HomePage = () => {
 
       {/* project grid */}
       <main className="max-w-2xl md:max-w-7xl mx-auto px-4 md:px-12 pt-16 pb-6 md:pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8">
+        <Masonry
+          breakpointCols={{
+            default: 3,
+            1024: 2,
+            768: 2,
+            640: 1
+          }}
+          className="flex -ml-8 w-auto"
+          columnClassName="pl-8 bg-clip-padding"
+        >
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <div key={project.id} className="mb-4">
+              <ProjectCard project={project} />
+            </div>
           ))}
-        </div>
+        </Masonry>
       </main>
 
       {/* footer for spacing */}
