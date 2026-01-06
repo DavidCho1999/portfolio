@@ -1,0 +1,4 @@
+for the homepage and content page, particularly for id 8, I'd like to make thumbnail or homepage and content page to be slideshow. like the slideshow we currently have in our content pages. for id8, I want two images 
+'c:/Users/A/Desktop/portfolio/my-portfolio/src/assets/projects/3b/bright.png''c:/Users/A/Desktop/portfolio/my-portfolio/src/assets/projects/3b/thumbnail.png' 
+
+

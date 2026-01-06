@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tasklist:*)",
+      "Bash(npm run dev:*)",
+      "Bash(claude --version:*)",
+      "Bash(claude mcp)",
+      "Bash(claude mcp:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7",
+    "filesystem",
+    "brave-search",
+    "github"
+  ]
+}
