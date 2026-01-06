@@ -197,7 +197,7 @@ const HomePage = () => {
       </header>
 
       {/* project grid */}
-      <main className="max-w-2xl md:max-w-7xl mx-auto px-4 md:px-12 pt-16 pb-6 md:pb-12">
+      <main className="px-4 md:px-3 pt-16 pb-6 md:pb-12">
         <Masonry
           breakpointCols={{
             default: 3,
@@ -205,8 +205,8 @@ const HomePage = () => {
             768: 2,
             640: 1
           }}
-          className="flex -ml-8 w-auto"
-          columnClassName="pl-8 bg-clip-padding"
+          className="flex w-auto gap-3"
+          columnClassName="bg-clip-padding"
         >
           {projects.map((project) => (
             <div key={project.id} className="mb-4">
