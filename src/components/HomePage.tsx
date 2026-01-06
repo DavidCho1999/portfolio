@@ -56,11 +56,11 @@ const HomePage = () => {
               </h1>
               <p className="text-[18px] md:text-[22px] text-black font-bold">
                 <span className="cursor-pointer md:hover:bg-gradient-to-r md:hover:from-blue-600 md:hover:to-cyan-500 md:hover:bg-clip-text md:hover:text-transparent md:transition-all md:duration-[800ms]">
-                  architectural
+                  Architectural
                 </span>
                 {' and '}
                 <span className="cursor-pointer md:hover:bg-gradient-to-r md:hover:from-purple-600 md:hover:to-pink-500 md:hover:bg-clip-text md:hover:text-transparent md:transition-all md:duration-[800ms]">
-                  computational designer
+                  Computational Designer
                 </span>
               </p>
             </div>

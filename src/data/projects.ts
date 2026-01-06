@@ -22,8 +22,6 @@ import carbon4 from '../assets/projects/carbon_calc/4.png';
 import carbon5 from '../assets/projects/carbon_calc/5.png';
 import carbon7 from '../assets/projects/carbon_calc/7.png';
 import thumbnail3b from '../assets/projects/3b/thumbnail.png';
-import bright3b from '../assets/projects/3b/bright.png';
-import plan3b from '../assets/projects/3b/plan.png';
 import plan1_3b from '../assets/projects/3b/plan1.png';
 import plan2_3b from '../assets/projects/3b/plan2.png';
 import plan3_3b from '../assets/projects/3b/plan3.png';
