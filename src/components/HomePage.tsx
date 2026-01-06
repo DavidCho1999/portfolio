@@ -24,22 +24,22 @@ const HomePage = () => {
 
             {/* Title section - center column on desktop */}
             <div>
-              <p className="text-[18px] md:text-[14px] text-black font-bold md:text-center">
-                Architectural designer / engineer
+              <p className="text-[12px] md:text-[14px] text-black font-bold md:text-center">
+                Architectural Designer / Engineer
               </p>
             </div>
 
             {/* Links section - right column on desktop */}
-            <nav className="flex items-center gap-3 pt-2 md:pt-0 md:justify-end relative">
-              
+            <nav className="flex items-baseline gap-3 pt-2 md:pt-0 md:justify-end relative">
+
               {/* --- NEW STRUCTURE START --- */}
               {/* Wrapped Info Button & Modal in a relative div to anchor the popup */}
               <div className="relative z-50 text-left">
-                
+
                 {/* Info button */}
                 <button
                   onClick={() => setIsInfoModalOpen(!isInfoModalOpen)}
-                  className="inline text-sm font-bold hover:text-gray-600 transition-colors border-b border-transparent hover:border-gray-600 bg-transparent border-0 p-0 cursor-pointer"
+                  className="text-sm font-bold hover:text-gray-600 transition-colors border-b border-transparent hover:border-gray-600 bg-transparent p-0 cursor-pointer"
                 >
                   Info
                 </button>
@@ -49,13 +49,18 @@ const HomePage = () => {
                   <>
                     {/* Fixed Backdrop: Covers screen to allow clicking outside to close */}
                     <div
-                      className="fixed inset-0 bg-black/30 backdrop-blur-sm cursor-default"
+                      className="fixed inset-0 bg-black/30  cursor-default"
                       onClick={() => setIsInfoModalOpen(false)}
                     />
 
                     {/* Modal Content: Absolute position */}
-                    <div className="absolute top-full right-0 mt-2 w-80 md:w-96 bg-white p-6 rounded-lg shadow-xl max-h-[80vh] overflow-y-auto">
-                      
+                    <div className="absolute top-full mt-2 bg-white p-6 rounded-lg shadow-xl max-h-[80vh] overflow-y-auto z-50
+  /* Mobile*/
+  left-1/2 -translate-x-1 w-[90vw] max-w-xs
+  /* desktop */
+  md:left-auto md:right-0 md:translate-x-0 md:w-96 md:mx-0
+">
+
                       {/* Close button */}
                       <button
                         className="absolute top-2 right-2 text-xl font-bold text-gray-400 hover:text-gray-600 bg-transparent border-0 cursor-pointer"
@@ -74,11 +79,19 @@ const HomePage = () => {
                             href="https://www.oftnarchitecture.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:bg-yellow-200 transition-colors inline-flex items-center gap-0.5"
+                            // [변경 1] items-center -> items-baseline 으로 변경하여 텍스트 밑줄 기준으로 정렬
+                            className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
                           >
                             <span className="underline">OFTN</span>
-                            <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            <svg
+                              // [변경 2] w-3 h-3 -> w-2 h-2 (크기를 작게)
+                              // [변경 3] relative -top-0.5 추가 (원래 위치보다 살짝 위로 올림)
+                              className="w-1.5 h-1.5 relative -top-1"
+                              viewBox="0 0 12 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                           </a>
                           ,{' '}
@@ -86,11 +99,11 @@ const HomePage = () => {
                             href="https://www.arcadis.com/en-ca/news/global/2022/9/arcadis-completes-the-acquisition-of-ibi-group"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:bg-yellow-200 transition-colors inline-flex items-center gap-0.5"
+                            className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
                           >
                             <span className="underline">Arcadis/IBI</span>
-                            <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                           </a>
                           ,{' '}
@@ -98,11 +111,11 @@ const HomePage = () => {
                             href="https://www.multi.studio/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:bg-yellow-200 transition-colors inline-flex items-center gap-0.5"
+                            className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
                           >
                             <span className="underline">Multistudio</span>
-                            <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                           </a>
                           ,{' '}
@@ -110,11 +123,11 @@ const HomePage = () => {
                             href="https://uwaterloo.ca/engineering/undergraduate-students/degree-enhancement/research-opportunities/ura"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:bg-yellow-200 transition-colors inline-flex items-center gap-0.5"
+                            className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
                           >
                             <span className="underline">University of Waterloo RA</span>
-                            <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                           </a>
                           .
@@ -152,7 +165,7 @@ const HomePage = () => {
       </header>
 
       {/* project grid */}
-      <main className="px-4 md:px-3 pt-8 pb-6 md:pb-12">
+      <main className="px-4 md:px-3 pt-2 pb-6 md:pb-12">
         <Masonry
           breakpointCols={{
             default: 3,

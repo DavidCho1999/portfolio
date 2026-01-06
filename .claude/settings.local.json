@@ -1,0 +1,8 @@
+{
+  "disabledMcpjsonServers": [
+    "context7",
+    "filesystem",
+    "brave-search",
+    "github"
+  ]
+}
