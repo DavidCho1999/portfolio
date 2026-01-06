@@ -1,197 +1,116 @@
-import { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import ProjectCard from './ProjectCard.tsx';
 import { getAllProjects } from '../data/projects.ts';
 
 const HomePage = () => {
   const projects = getAllProjects();
-  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
-  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
-  const [isLinkedInModalOpen, setIsLinkedInModalOpen] = useState(false);
-  const [emailCopied, setEmailCopied] = useState(false);
-
-  const handleCopyEmail = () => {
-    const email = 'd29cho@uwaterloo.ca';
-
-    // Try modern clipboard API first
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(email).then(() => {
-        setEmailCopied(true);
-        setTimeout(() => setEmailCopied(false), 2000);
-      });
-    } else {
-      // Fallback for mobile/older browsers
-      const textArea = document.createElement('textarea');
-      textArea.value = email;
-      textArea.style.position = 'fixed';
-      textArea.style.left = '-999999px';
-      textArea.style.top = '-999999px';
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-
-      try {
-        document.execCommand('copy');
-        setEmailCopied(true);
-        setTimeout(() => setEmailCopied(false), 2000);
-      } catch (err) {
-        console.error('Failed to copy:', err);
-      }
-
-      document.body.removeChild(textArea);
-    }
-  };
 
   return (
     <div className="bg-white text-black font-inter">
       {/* header area */}
-      <header className="flex items-start pt-5 md:pt-16">
-        <div className="max-w-2xl mx-auto w-full px-4 md:px-12">
-          <div className="flex flex-col items-start gap-2">
+      <header className="flex items-start pt-5 md:pt-2">
+        <div className="w-full px-4 md:px-3">
+          {/* Mobile: vertical stack | Desktop: 3-column grid */}
+          <div className="flex flex-col md:grid md:grid-cols-[auto_1fr_auto] md:items-start md:gap-8">
 
-            {/* intro texts */}
+            {/* Name section - left column on desktop */}
             <div className="space-y-1">
-              <h1 className="text-[18px] md:text-[22px] font-bold leading-tight tracking-tight">
-                Dongje Cho,
+              <h1 className="text-[18px] md:text-[14px] font-bold leading-tight tracking-tight">
+                Dongje Cho
               </h1>
-              <p className="text-[18px] md:text-[22px] text-black font-bold">
-                <span className="cursor-pointer md:hover:bg-gradient-to-r md:hover:from-blue-600 md:hover:to-cyan-500 md:hover:bg-clip-text md:hover:text-transparent md:transition-all md:duration-[800ms]">
-                  Architectural
-                </span>
-                {' and '}
-                <span className="cursor-pointer md:hover:bg-gradient-to-r md:hover:from-purple-600 md:hover:to-pink-500 md:hover:bg-clip-text md:hover:text-transparent md:transition-all md:duration-[800ms]">
-                  Computational Designer
-                </span>
+            </div>
+
+            {/* Title section - center column on desktop - plain text, no effects */}
+            <div>
+              <p className="text-[18px] md:text-[14px] text-black font-bold md:text-center">
+                Computational designer / engineer
               </p>
             </div>
 
-            {/* links */}
-            <nav className="flex items-center gap-3 pt-2 relative z-[100]">
-              <div className="relative inline-block">
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsEmailModalOpen(false);
-                    setIsLinkedInModalOpen(false);
-                    setIsInfoModalOpen(true);
-                  }}
-                  className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors border-b border-transparent hover:border-blue-600 cursor-pointer"
-                >
-                  <div>
-                    <p className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors">Info</p>
-                  </div>
-                </a>
+            {/* Links section - right column on desktop */}
+            <nav className="flex items-center gap-3 pt-2 md:pt-0 md:justify-end relative">
+              {/* LinkedIn - direct link */}
+              <a
+                href="https://www.linkedin.com/in/dongje-cho-573763194/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-bold hover:text-gray-600 transition-colors border-b border-transparent hover:border-gray-600"
+              >
+                LinkedIn
+              </a>
 
-                {/* Info Popup */}
-                {isInfoModalOpen && (
-                  <>
-                    {/* Backdrop */}
-                    <div className="fixed inset-0 z-40" onClick={() => setIsInfoModalOpen(false)} />
-
-                    {/* Popup content */}
-                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-80 p-6 z-[50]">
-                      {/* Popup content */}
-                      <div className="space-y-2 text-sm">
-                        <p>
-                          Based in Waterloo, ON.
-                        </p>
-                        <p>
-                          Currently interested in...
-                        </p>
-                        <p>
-                          Previously at OFTN, Arcadis/IBI, Multistudio, University of Waterloo RA.
-                        </p>
-                        <p>
-                          Skilled in AEC Automation, BIM Management, UI/UX, AI implementation, Modeling
-                        </p>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-
-              <div className="relative inline-block">
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsInfoModalOpen(false);
-                    setIsEmailModalOpen(false);
-                    setIsLinkedInModalOpen(true);
-                  }}
-                  className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors border-b border-transparent hover:border-blue-600 cursor-pointer"
-                >
-                  <div>
-                    <p className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors">LinkedIn</p>
-                  </div>
-                </a>
-
-                {/* LinkedIn Popup */}
-                {isLinkedInModalOpen && (
-                  <>
-                    {/* Backdrop */}
-                    <div className="fixed inset-0 z-40" onClick={() => setIsLinkedInModalOpen(false)} />
-
-                    {/* Popup content */}
-                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-fit p-6 z-[101]">
-                      {/* Popup content */}
-                      <div className="space-y-2 text-sm whitespace-nowrap">
-                        <a
-                          href="https://www.linkedin.com/in/dongje-cho-573763194/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cursor-pointer hover:text-blue-600 transition-colors block"
-                        >
-                          linkedin.com/in/dongje-cho-573763194
-                        </a>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-
-              <div className="relative inline-block">
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsInfoModalOpen(false);
-                    setIsLinkedInModalOpen(false);
-                    setIsEmailModalOpen(true);
-                  }}
-                  className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors border-b border-transparent hover:border-blue-600 cursor-pointer"
-                >
-                  <div>
-                    <p className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors">Email</p>
-                  </div>
-                </a>
-
-                {/* Email Popup */}
-                {isEmailModalOpen && (
-                  <>
-                    {/* Backdrop */}
-                    <div className="fixed inset-0 z-40" onClick={() => setIsEmailModalOpen(false)} />
-
-                    {/* Popup content */}
-                    <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg w-fit p-6 z-[101]">
-                      {/* Popup content */}
-                      <div className="space-y-2 text-sm whitespace-nowrap">
-                        <p
-                          onClick={handleCopyEmail}
-                          className="cursor-pointer hover:text-blue-600 transition-colors"
-                        >
-                          d29cho@uwaterloo.ca
-                        </p>
-                        {emailCopied && (
-                          <p className="text-green-600 text-xs">Copied to clipboard!</p>
-                        )}
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
+              {/* Email - direct mailto link */}
+              <a
+                href="mailto:d29cho@uwaterloo.ca"
+                className="text-sm font-bold hover:text-gray-600 transition-colors border-b border-transparent hover:border-gray-600"
+              >
+                Email
+              </a>
             </nav>
+          </div>
+
+          {/* Info content - always visible below header */}
+          <div className="mt-8 space-y-0.5 text-sm font-bold">
+            <p>
+              Based in Waterloo, ON.
+            </p>
+            <p>
+              Currently interested in AEC Automation
+            </p>
+            <p>
+              Previously at{' '}
+              <a
+                href="https://www.oftnarchitecture.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-yellow-200 transition-colors inline-flex items-center gap-0.5"
+              >
+                <span className="underline">OFTN</span>
+                <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              ,{' '}
+              <a
+                href="https://www.arcadis.com/en-ca/news/global/2022/9/arcadis-completes-the-acquisition-of-ibi-group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-yellow-200 transition-colors inline-flex items-center gap-0.5"
+              >
+                <span className="underline">Arcadis/IBI</span>
+                <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              ,{' '}
+              <a
+                href="https://www.multi.studio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-yellow-200 transition-colors inline-flex items-center gap-0.5"
+              >
+                <span className="underline">Multistudio</span>
+                <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              ,{' '}
+              <a
+                href="https://uwaterloo.ca/engineering/undergraduate-students/degree-enhancement/research-opportunities/ura"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-yellow-200 transition-colors inline-flex items-center gap-0.5"
+              >
+                <span className="underline">University of Waterloo RA</span>
+                <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              .
+            </p>
+            <p>
+              Skilled in BIM Management, UI/UX, AI implementation, Modeling
+            </p>
           </div>
         </div>
       </header>
