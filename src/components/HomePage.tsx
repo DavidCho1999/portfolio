@@ -82,7 +82,7 @@ const HomePage = () => {
                             // [변경 1] items-center -> items-baseline 으로 변경하여 텍스트 밑줄 기준으로 정렬
                             className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
                           >
-                            <span className="underline">OFTN</span>
+                            <span className="underline decoration-dotted underline-offset-2 decoration-black/30">OFTN</span>
                             <svg
                               // [변경 2] w-3 h-3 -> w-2 h-2 (크기를 작게)
                               // [변경 3] relative -top-0.5 추가 (원래 위치보다 살짝 위로 올림)
@@ -101,7 +101,7 @@ const HomePage = () => {
                             rel="noopener noreferrer"
                             className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
                           >
-                            <span className="underline">Arcadis/IBI</span>
+                            <span className="underline decoration-dotted underline-offset-2 decoration-black/30">Arcadis/IBI</span>
                             <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
@@ -113,7 +113,7 @@ const HomePage = () => {
                             rel="noopener noreferrer"
                             className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
                           >
-                            <span className="underline">Multistudio</span>
+                            <span className="underline decoration-dotted underline-offset-2 decoration-black/30">Multistudio</span>
                             <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
@@ -125,7 +125,7 @@ const HomePage = () => {
                             rel="noopener noreferrer"
                             className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
                           >
-                            <span className="underline">University of Waterloo RA</span>
+                            <span className="underline decoration-dotted underline-offset-2 decoration-black/30">University of Waterloo RA</span>
                             <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
