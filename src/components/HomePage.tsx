@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Masonry from 'react-masonry-css';
 import ProjectCard from './ProjectCard.tsx';
 import { getAllProjects } from '../data/projects.ts';
@@ -6,6 +6,65 @@ import { getAllProjects } from '../data/projects.ts';
 const HomePage = () => {
   const projects = getAllProjects();
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
+
+  // Preload all thumbnail images
+  useEffect(() => {
+    const thumbnails = projects
+      .map(project => project.thumbnailImage)
+      .filter(Boolean);
+
+    if (thumbnails.length === 0) {
+      setImagesLoaded(true);
+      return;
+    }
+
+    // Only show loader if images take longer than 150ms to load
+    // This means cached images won't trigger the loader
+    const loaderTimer = setTimeout(() => {
+      if (!imagesLoaded) {
+        setShowLoader(true);
+      }
+    }, 150);
+
+    let loadedCount = 0;
+    const imagePromises = thumbnails.map((src) => {
+      return new Promise<void>((resolve) => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === thumbnails.length) {
+            clearTimeout(loaderTimer);
+            setImagesLoaded(true);
+          }
+          resolve();
+        };
+        img.onerror = () => {
+          loadedCount++;
+          if (loadedCount === thumbnails.length) {
+            clearTimeout(loaderTimer);
+            setImagesLoaded(true);
+          }
+          resolve();
+        };
+        img.src = src;
+      });
+    });
+
+    Promise.all(imagePromises);
+
+    return () => clearTimeout(loaderTimer);
+  }, [projects, imagesLoaded]);
+
+  // Show loader only if images are taking a while to load
+  if (showLoader && !imagesLoaded) {
+    return (
+      <div className="fixed inset-0 bg-white flex items-center justify-center">
+        <div className="w-12 h-12 border-3 border-gray-200 border-t-black rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white text-black font-inter">
