@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export interface ProjectImage {
   src: string;
   alt: string;
@@ -10,6 +12,7 @@ export interface ProjectImage {
 }
 
 export interface Project {
+  site: ReactNode;
   id: number;
   slug: string;
   client: string;

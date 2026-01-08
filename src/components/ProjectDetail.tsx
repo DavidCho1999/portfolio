@@ -84,46 +84,70 @@ const ProjectDetail = () => {
         )}
 
         {/* Project Title (large) */}
-        <h1 className="text-3xl md:text-3xl font-bold leading-tight mb-8 whitespace-pre-line">
+        <h1 className="text-3xl md:text-3xl font-bold leading-tight mb-7 whitespace-pre-line">
           {project.title}
         </h1>
 
         {/* Description */}
         <div className="prose prose-lg max-w-none mb-6">
-          <p className="text-[13px] leading-relaxed text-black whitespace-pre-line">
+          <p className="text-[13.5px] font-bold leading-relaxed text-black whitespace-pre-line">
             {project.description}
           </p>
         </div>
 
         {/* Metadata Grid */}
         <div className="grid grid-cols-2 gap-6 mb-8">
-          <div>
-            <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
-              ROLE
-            </p>
-            <p className="text-[13px] font-medium">{project.role}</p>
-          </div>
+          {project.team && (
+            <div>
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
+                TEAM
+              </p>
+              <p className="text-[13px] font-medium">{project.team}</p>
+            </div>
+          )}
 
-          <div>
-            <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
-              TOOLS
-            </p>
-            <p className="text-[13px] font-medium">{project.tools.join(' / ')}</p>
-          </div>
+          {project.site && (
+            <div>
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
+                SITE
+              </p>
+              <a
+                href={project.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[13px] font-medium hover:text-gray-600 cursor-pointer transition-colors"
+              >
+                {project.site}
+              </a>
+            </div>
+          )}
 
-          <div>
-            <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
-              TEAM
-            </p>
-            <p className="text-[13px] font-medium">{project.team}</p>
-          </div>
+          {project.role && (
+            <div>
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
+                ROLE
+              </p>
+              <p className="text-[13px] font-medium">{project.role}</p>
+            </div>
+          )}
 
-          <div>
-            <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
-              DURATION
-            </p>
-            <p className="text-[13px] font-medium">{project.duration}</p>
-          </div>
+          {project.tools && project.tools.length > 0 && (
+            <div>
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
+                TOOLS
+              </p>
+              <p className="text-[13px] font-medium">{project.tools.join(' / ')}</p>
+            </div>
+          )}
+
+          {project.duration && (
+            <div>
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
+                DURATION
+              </p>
+              <p className="text-[13px] font-medium">{project.duration}</p>
+            </div>
+          )}
         </div>
 
         {/* Image/Video/Slideshow Gallery (remaining images after hero) */}

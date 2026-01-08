@@ -84,12 +84,12 @@ const HomePage = () => {
             {/* Title section - center column on desktop */}
             <div>
               <p className="text-[12px] md:text-[14px] text-black font-bold md:text-center">
-                Architectural Designer / Engineer
+                Computational Designer / Architectural Engineer
               </p>
             </div>
 
             {/* Links section - right column on desktop */}
-            <nav className="flex items-baseline gap-3 pt-2 md:pt-0 md:justify-end relative">
+            <nav className="flex items-baseline gap-3 pt-6 md:pt-0 md:justify-end relative">
 
               {/* --- NEW STRUCTURE START --- */}
               {/* Wrapped Info Button & Modal in a relative div to anchor the popup */}
@@ -113,25 +113,20 @@ const HomePage = () => {
                     />
 
                     {/* Modal Content: Absolute position */}
-                    <div className="absolute top-full mt-2 bg-white p-6 rounded-lg shadow-xl max-h-[80vh] overflow-y-auto z-50
-  /* Mobile*/
-  left-1/2 -translate-x-1 w-[90vw] max-w-xs
-  /* desktop */
-  md:left-auto md:right-0 md:translate-x-0 md:w-96 md:mx-0
-">
+                    <div className="absolute top-full mt-1 bg-white p-3 rounded-md shadow-md max-h-[80vh] overflow-y-auto z-50 /* Mobile*/ left-0 -translate-x-1 w-[90vw] max-w-s /* desktop */ md:left-auto md:right-0 md:translate-x-0 md:w-96 md:mx-0">
 
-                      {/* Close button */}
+                      {/* Close button
                       <button
                         className="absolute top-2 right-2 text-xl font-bold text-gray-400 hover:text-gray-600 bg-transparent border-0 cursor-pointer"
                         onClick={() => setIsInfoModalOpen(false)}
                       >
                         ×
-                      </button>
+                      </button> */}
 
                       {/* Modal content */}
-                      <div className="space-y-2 text-sm mt-2">
+                      <div className="space-y-1 text-sm">
                         <p>Based in Waterloo, ON.</p>
-                        <p>Currently interested in AEC Automation</p>
+                        <p>Currently interested in Ai implementation design.</p>
                         <p>
                           Previously at{' '}
                           <a
@@ -192,7 +187,7 @@ const HomePage = () => {
                           .
                         </p>
                         <p>
-                          Skilled in BIM Management, UI/UX, AI implementation, Modeling
+                          Skilled in BIM Management, AEC Automation, Modeling, Climate Analysis. 
                         </p>
                       </div>
                     </div>

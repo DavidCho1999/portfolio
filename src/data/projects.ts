@@ -50,15 +50,17 @@ export const projects: Project[] = [
     id: 1,
     slug: 'climate-analysis',
     client: 'Office for the next environment',
-    title: `East Side Greenway
-Climate Analysis.`,
+    title: `East Side Greenway Climate Analysis.`,
     tag: 'EXISTING CONDITION',
+    site: 'East River Greenway, NY',
+    mapUrl : 'https://maps.app.goo.gl/5oCkK6B28TZdSCef7',
     color: 'bg-gray-200',
-    description: `I was in charge of....
+    description: `Our team managed the early design phase for a park located along a roadway in eastern Manhattan, with a focus on climate resilience.
     
-    1. Daylight analysis to spot intense area
-    2. Sun shadow analysis to spot most shading spots
-    3. Organized scripts for everyone’s use`,
+    My service:
+    1. Daylighting analysis to identify which areas received the most sun exposure.
+    2. Sun shading analysis to determine which zones were most affected by shadows.
+    3. Grasshopper scripts for the entire team to use, easy streamlining the workflow.`,
     role: 'Climate Study',
     team: 'Office for the Next Environment',
     duration: '2025 OCT',
@@ -86,7 +88,8 @@ Climate Analysis.`,
         slideshowTransition: 'crossfade',
         transitionDuration: 500
       },
-    ]
+    ],
+    
   },
   {
     id: 2,
@@ -95,14 +98,21 @@ Climate Analysis.`,
     title: 'Chinatown Connection Carbon Analysis.',
     tag: 'DESIGN BASELINE',
     color: 'bg-gray-300',
-    description: 'Comprehensive carbon analysis for the Chinatown Connection project. Developed Python and Grasshopper scripts to calculate embodied carbon across different building materials and design scenarios.',
+    description: `Chinatown Connection project is an 85,000 sqft landscape project focused on climate resilience and simplifying complex urban structures. My primary role was conducting an Embodied Carbon Analysis (Stage A1-A3).
+    
+    My service:
+    1. EC3 Data Integration: Built a pipeline to import EC3 material data directly into Excel.
+    2. Grasshopper Scripting: Made script to extract geometry metrics (length/area) and automatically export them to Excel.
+    3. Automated Calculation: Within Excel, to calculate the total carbon footprint based on the imported data.
+    4. AI Integration: Integrated an AI tool to read the calculated data and provide performance assessments.`,
     role: 'Carbon Study',
     team: 'Office for the Next Environment',
     duration: '2025',
+    site: 'Chinatown, NY',
+    mapUrl : 'https://maps.app.goo.gl/AHTVzKhPnmjkknCs7',
     tools: ['Grasshopper', 'Excel', 'Python'],
     thumbnailImage: carbonThumbnail,
     images: [
-
       { src: carbonThumbnail, alt: 'Carbon analysis thumbnail' },
       { src: carbon1, alt: 'Carbon analysis image 1' },
       { src: carbon2, alt: 'Carbon analysis image 2' },
@@ -110,7 +120,7 @@ Climate Analysis.`,
       { src: carbon4, alt: 'Carbon analysis image 4' },
       { src: carbon5, alt: 'Carbon analysis image 5' },
       { src: carbon7, alt: 'Carbon analysis image 7' }
-    ]
+    ],
   },
   {
     id: 3,
@@ -119,7 +129,17 @@ Climate Analysis.`,
     title: 'Harriman Campus Landscape/Climate Analysis',
     tag: '',
     color: 'bg-gray-200',
-    description: 'BIM-based landscape carbon analysis combining 3D modeling with environmental impact calculations.',
+    site : 'Harriman Campus, NY',
+    mapUrl : 'https://maps.app.goo.gl/BnEUk2y7KrPZar2K6',
+    description: `The Harriman project is a security facility developed in collaboration with firms like Marvel and Thornton Tomasetti. My team was responsible for the landscape design and climate studies.
+    
+    My service:
+    1. Managed the Revit pipeline to ensure smooth coordination and file sharing between our team and the external firms.
+    2. Modeled landscape elements in Revit, including mechanical pipelines, retaining walls, toposolid, referenced by mechanical/structural drawings.
+    3. Created custom Revit families for site components like fences, doors, and stairs, and communicated directly with them to verify the layout.
+    4. Analyzed multiple facade options for solar performance and LEED compliance.
+    
+    `,
     role: 'BIM Analyst',
     team: 'Office for the Next Environment',
     duration: '2025',
@@ -139,10 +159,11 @@ Climate Analysis.`,
     title: 'Computational Design Lab',
     tag: '',
     color: 'bg-gray-300',
-    description: 'Showcasing approx. 30 facade and structural concepts coded in Rhino Grasshopper. This collection blends reference studies with original designs, focusing on parametric optimization for both performance and aesthetics. The goal is to translate these computational methods into real-world architectural projects." (Instagram: https://www.instagram.com/arch_ghs)',
+    description: 'Showcasing approx. 30 facade and structural concepts coded in Rhino Grasshopper. This collection blends reference studies with original designs, focusing on parametric optimization for both performance and aesthetics. The goal is to translate these computational methods into real-world architectural projects. (Instagram: https://www.instagram.com/arch_ghs)',
     role: 'Computational Designer',
     team: 'Self-Initiated',
-    duration: '2024',
+    duration: '2024 - sometimes',
+
     tools: ['Grasshopper', 'Rhino'],
     thumbnailImage: designLabThumbnail,
     images: [
@@ -152,7 +173,8 @@ Climate Analysis.`,
       { src: designLab3, alt: 'Design Lab pattern 3' },
       { src: designLab4, alt: 'Design Lab pattern 4' },
       { src: designLab5, alt: 'Design Lab pattern 5' }
-    ]
+    ],
+    site: undefined
   },
   {
     id: 8,
@@ -161,11 +183,16 @@ Climate Analysis.`,
     title: 'BIM Coordination',
     tag: '',
     color: 'bg-gray-300',
-    description: 'Project description goes here.',
+    description: `This project was developed during a 4-month academic studio. Our team designed a high-rise residential building entirely from scratch, integrating architectural, structural, and mechanical systems. The primary goals of the design were sustainability and climate resiliency.
+    
+    My service:
+    1. Managed BIM coordination for architectural, structural, and mechanical systems to resolve conflicts.
+2. Reviewed zoning laws and building codes to ensure the design followed all regulations.
+3. Collaborated with a teammate to analyze structural loads and determine the framework requirements.`,
     role: 'BIM Coordination',
     team: 'Ahmed Rosli, Jingyu Lu, Gabriel Codina',
     duration: '2024',
-    tools: ['Revit, Rhino inside Revit, D5 Render'],
+    tools: ['Revit / Rhino inside Revit / D5'],
     thumbnailImage: thumbnail3b,
     images: [
       {
@@ -202,7 +229,8 @@ Climate Analysis.`,
         slideshowTransition: 'crossfade',
         transitionDuration: 800
       }
-    ]
+    ],
+    site: 'Victoria Park'
   },
   {
     id: 5,
@@ -219,7 +247,8 @@ Climate Analysis.`,
     thumbnailImage: uwaterlooLogo,
     images: [
       { src: uwaterlooLogo, alt: 'University of Waterloo logo' }
-    ]
+    ],
+    site: 'Waterloo, ON'
   },
   {
     id: 6,
@@ -234,7 +263,8 @@ Climate Analysis.`,
     duration: '2024 Jan-Apr',
     tools: ['Revit, Grasshopper, Python, Rhino'],
     thumbnailImage: arcadislogo,
-    images: [{ src: arcadislogo, alt: 'Arcadis/IBI Group logo' }]
+    images: [{ src: arcadislogo, alt: 'Arcadis/IBI Group logo' }],
+    site: 'Vancouver, BC'
   },
   {
     id: 7,
@@ -251,7 +281,8 @@ Climate Analysis.`,
     thumbnailImage: multistudioLogo,
     images: [
       { src: multistudioLogo, alt: 'Multistudio logo' }
-    ]
+    ],
+    site: 'San Francisco, CA'
   },
   {
     id: 9,
@@ -260,15 +291,16 @@ Climate Analysis.`,
     title: 'BIM Coordination',
     tag: '',
     color: 'bg-gray-200',
-    description: 'Project description goes here.',
-    role: 'Role',
+    description: 'Currently working on it.',
+    role: 'Architectural Lead',
     team: 'Paul Yang, Druthi Padamati, Mithuna Kandasamy',
-    duration: '2024',
-    tools: ['Tool1', 'Tool2'],
+    duration: '8 Months',
+    tools: ['Revit, Rhino, Grasshopper'],
     thumbnailImage: capstoneThumbnail,
     images: [
       { src: capstoneThumbnail, alt: 'Capstone Isometric View' }
-    ]
+    ],
+    site: 'City of Gary'
   }
 ];
 
