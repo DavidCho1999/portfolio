@@ -174,7 +174,6 @@ export const projects: Project[] = [
       { src: designLab4, alt: 'Design Lab pattern 4' },
       { src: designLab5, alt: 'Design Lab pattern 5' }
     ],
-    site: undefined
   },
   {
     id: 8,

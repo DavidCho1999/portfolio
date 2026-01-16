@@ -12,7 +12,8 @@ export interface ProjectImage {
 }
 
 export interface Project {
-  site: ReactNode;
+  site?: ReactNode;
+  mapUrl?: string;
   id: number;
   slug: string;
   client: string;

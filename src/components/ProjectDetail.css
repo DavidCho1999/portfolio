@@ -24,7 +24,7 @@
 .yarl__container,
 .yarl__slide,
 .yarl__button,
-* {
+.yarl__root {
   box-shadow: none !important;
   filter: none !important;
 }

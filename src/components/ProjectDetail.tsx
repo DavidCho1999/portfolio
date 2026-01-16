@@ -111,14 +111,18 @@ const ProjectDetail = () => {
               <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
                 SITE
               </p>
-              <a
-                href={project.mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[13px] font-medium hover:text-gray-600 cursor-pointer transition-colors"
-              >
-                {project.site}
-              </a>
+              {project.mapUrl ? (
+                <a
+                  href={project.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[13px] font-medium hover:text-gray-600 cursor-pointer transition-colors"
+                >
+                  {project.site}
+                </a>
+              ) : (
+                <span className="text-[13px] font-medium">{project.site}</span>
+              )}
             </div>
           )}
 
