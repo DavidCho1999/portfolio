@@ -129,3 +129,12 @@ Projects are defined in `src/data/projects.ts` as a TypeScript array. Each proje
 - Build target: `base: '/portfolio/'` in vite.config.ts
 - Output directory: `my-portfolio/dist/`
 - The build compiles TypeScript first (`tsc -b`) then bundles with Vite
+
+## Efficiency Guidelines
+
+**For small changes (1-5 lines of code):**
+- Skip plan mode - just execute directly
+- Kill dev server first to avoid file conflicts
+- Use `sed` for direct edits instead of Edit tool loops
+- Don't re-read files unnecessarily
+- Pattern: `KillShell` → `sed` → restart server → done
