@@ -1,0 +1,48 @@
+{
+  "order": 5,
+  "slug": "project-8",
+  "client": "University of Waterloo Studio",
+  "title": "BIM Coordination",
+  "tag": "",
+  "color": "bg-gray-300",
+  "site": "Victoria Park",
+  "mapUrl": "",
+  "description": "This project was developed during a 4-month academic studio. Our team designed a high-rise residential building entirely from scratch, integrating architectural, structural, and mechanical systems. The primary goals of the design were sustainability and climate resiliency.\n\nMy service:\n1. Managed BIM coordination for architectural, structural, and mechanical systems to resolve conflicts.\n2. Reviewed zoning laws and building codes to ensure the design followed all regulations.\n3. Collaborated with a teammate to analyze structural loads and determine the framework requirements.",
+  "role": "BIM Coordination",
+  "team": "Ahmed Rosli, Jingyu Lu, Gabriel Codina",
+  "duration": "2024",
+  "tools": ["Revit / Rhino inside Revit / D5"],
+  "thumbnail": "/projects/3b/thumbnail.png",
+  "images": [
+    { "src": "/projects/3b/thumbnail.png", "alt": "BIM Coordination" },
+    {
+      "src": "/projects/3b/plan1.png",
+      "alt": "BIM Coordination plans slideshow",
+      "type": "slideshow",
+      "slideshow": [
+        "/projects/3b/plan1.png",
+        "/projects/3b/plan2.png",
+        "/projects/3b/plan3.png",
+        "/projects/3b/plan4.png"
+      ],
+      "slideshowInterval": 3500,
+      "slideshowTransition": "crossfade",
+      "transitionDuration": 800
+    },
+    { "src": "/projects/3b/indesign_images1.png", "alt": "InDesign image 1" },
+    { "src": "/projects/3b/indesign_images2.png", "alt": "InDesign image 2" },
+    { "src": "/projects/3b/indesign_images3.png", "alt": "InDesign image 3" },
+    {
+      "src": "/projects/3b/indesign_images4.png",
+      "alt": "InDesign slideshow",
+      "type": "slideshow",
+      "slideshow": [
+        "/projects/3b/indesign_images4.png",
+        "/projects/3b/indesign_images5.png"
+      ],
+      "slideshowInterval": 5500,
+      "slideshowTransition": "crossfade",
+      "transitionDuration": 800
+    }
+  ]
+}

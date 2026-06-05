@@ -1,0 +1,22 @@
+{
+  "order": 3,
+  "slug": "carbon-analysis-bim-landscape",
+  "client": "Office for the next environment",
+  "title": "Harriman Campus Landscape/Climate Analysis",
+  "tag": "",
+  "color": "bg-gray-200",
+  "site": "Harriman Campus, NY",
+  "mapUrl": "https://maps.app.goo.gl/BnEUk2y7KrPZar2K6",
+  "description": "The Harriman project is a security facility developed in collaboration with firms like Marvel and Thornton Tomasetti. My team was responsible for the landscape design and climate studies.\n\nMy service:\n1. Managed the Revit pipeline to ensure smooth coordination and file sharing between our team and the external firms.\n2. Modeled landscape elements in Revit, including mechanical pipelines, retaining walls, toposolid, referenced by mechanical/structural drawings.\n3. Created custom Revit families for site components like fences, doors, and stairs, and communicated directly with them to verify the layout.\n4. Analyzed multiple facade options for solar performance and LEED compliance.",
+  "role": "BIM Analyst",
+  "team": "Office for the Next Environment",
+  "duration": "2025",
+  "tools": ["Rhino", "Grasshopper", "Excel"],
+  "thumbnail": "/projects/harriman/thumbnail_1.png",
+  "images": [
+    { "src": "/projects/harriman/thumbnail_1.png", "alt": "Harriman Campus thumbnail" },
+    { "src": "/projects/harriman/2WAY_IMAGES.png", "alt": "Harriman 2-way view 1" },
+    { "src": "/projects/harriman/2WAY_IMAGES2.png", "alt": "Harriman 2-way view 2" },
+    { "src": "/projects/harriman/2WAY_IMAGES3.png", "alt": "Harriman 2-way view 3" }
+  ]
+}

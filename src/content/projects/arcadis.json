@@ -1,0 +1,19 @@
+{
+  "order": 7,
+  "slug": "arcadis",
+  "client": "Arcadis/IBI Group",
+  "title": "Intern - High rise Residential",
+  "tag": "",
+  "color": "bg-gray-300",
+  "site": "Vancouver, BC",
+  "mapUrl": "",
+  "description": "Advanced BIM coordination and management for university infrastructure projects.",
+  "role": "BIM, computational design",
+  "team": "Arcadis/IBI Group",
+  "duration": "2024 Jan-Apr",
+  "tools": ["Revit, Grasshopper, Python, Rhino"],
+  "thumbnail": "/projects/arcadis/logo.png",
+  "images": [
+    { "src": "/projects/arcadis/logo.png", "alt": "Arcadis/IBI Group logo" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "order": 2,
+  "slug": "carbon-analysis",
+  "client": "Office for the next environment",
+  "title": "Chinatown Connection Carbon Analysis.",
+  "tag": "DESIGN BASELINE",
+  "color": "bg-gray-300",
+  "site": "Chinatown, NY",
+  "mapUrl": "https://maps.app.goo.gl/AHTVzKhPnmjkknCs7",
+  "description": "Chinatown Connection project is an 85,000 sqft landscape project focused on climate resilience and simplifying complex urban structures. My primary role was conducting an Embodied Carbon Analysis (Stage A1-A3).\n\nMy service:\n1. EC3 Data Integration: Built a pipeline to import EC3 material data directly into Excel.\n2. Grasshopper Scripting: Made script to extract geometry metrics (length/area) and automatically export them to Excel.\n3. Automated Calculation: Within Excel, to calculate the total carbon footprint based on the imported data.\n4. AI Integration: Integrated an AI tool to read the calculated data and provide performance assessments.",
+  "role": "Carbon Study",
+  "team": "Office for the Next Environment",
+  "duration": "2025",
+  "tools": ["Grasshopper", "Excel", "Python"],
+  "thumbnail": "/projects/carbon_calc/thumbnail.png",
+  "images": [
+    { "src": "/projects/carbon_calc/thumbnail.png", "alt": "Carbon analysis thumbnail" },
+    { "src": "/projects/carbon_calc/1.png", "alt": "Carbon analysis image 1" },
+    { "src": "/projects/carbon_calc/2.png", "alt": "Carbon analysis image 2" },
+    { "src": "/projects/carbon_calc/3.png", "alt": "Carbon analysis image 3" },
+    { "src": "/projects/carbon_calc/4.png", "alt": "Carbon analysis image 4" },
+    { "src": "/projects/carbon_calc/5.png", "alt": "Carbon analysis image 5" },
+    { "src": "/projects/carbon_calc/7.png", "alt": "Carbon analysis image 7" }
+  ]
+}

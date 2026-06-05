@@ -1,0 +1,48 @@
+{
+  "order": 1,
+  "slug": "climate-analysis",
+  "client": "Office for the next environment",
+  "title": "East Side Greenway Climate Analysis.",
+  "tag": "EXISTING CONDITION",
+  "color": "bg-gray-200",
+  "site": "East River Greenway, NY",
+  "mapUrl": "https://maps.app.goo.gl/5oCkK6B28TZdSCef7",
+  "description": "Our team managed the early design phase for a park located along a roadway in eastern Manhattan, with a focus on climate resilience.\n\nMy service:\n1. Daylighting analysis to identify which areas received the most sun exposure.\n2. Sun shading analysis to determine which zones were most affected by shadows.\n3. Grasshopper scripts for the entire team to use, easy streamlining the workflow.",
+  "role": "Climate Study",
+  "team": "Office for the Next Environment",
+  "duration": "2025 OCT",
+  "tools": ["Grasshopper", "Rhino"],
+  "thumbnail": "/projects/greenway/rendered.jpg",
+  "images": [
+    { "src": "/projects/greenway/rendered.jpg", "alt": "Rendered view of the climate study" },
+    { "src": "/projects/greenway/transition_video.mp4", "alt": "Climate transition video", "caption": "timelapse", "type": "video" },
+    { "src": "/projects/greenway/SOUTH EAST 3D.png", "alt": "South East 3D visualization", "caption": "Winter shadow (3 hours)" },
+    { "src": "/projects/greenway/grasshopper.png", "alt": "Grasshopper script", "caption": "Grasshopper script for analysis" },
+    {
+      "src": "/projects/greenway/heat30.png",
+      "alt": "Heat analysis slideshow",
+      "caption": "Sideshow (multiple images will show)",
+      "type": "slideshow",
+      "slideshow": [
+        "/projects/greenway/heat30.png",
+        "/projects/greenway/heat40.png",
+        "/projects/greenway/heat50.png",
+        "/projects/greenway/heat60.png",
+        "/projects/greenway/heat70.png"
+      ],
+      "slideshowInterval": 2000
+    },
+    {
+      "src": "/projects/greenway/analemna_3.jpg",
+      "alt": "Sun path analysis",
+      "type": "slideshow",
+      "slideshow": [
+        "/projects/greenway/analemna_3.jpg",
+        "/projects/greenway/ecotect arrow.jpg"
+      ],
+      "slideshowInterval": 3000,
+      "slideshowTransition": "crossfade",
+      "transitionDuration": 500
+    }
+  ]
+}

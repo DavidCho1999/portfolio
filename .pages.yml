@@ -1,0 +1,107 @@
+media:
+  input: public/projects
+  output: /projects
+  extensions: [png, jpg, jpeg, webp, gif, svg, mp4]
+
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: src/content/projects
+    filename: '{fields.slug}.json'
+    format: json
+    view:
+      fields: [order, client, title]
+      primary: title
+      sort: [order]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: order
+        label: Display order
+        type: number
+        description: Lower numbers show first on the homepage.
+        default: 99
+      - name: slug
+        label: Slug (URL id — lowercase, no spaces)
+        type: string
+        required: true
+        pattern:
+          regex: '^[a-z0-9-]+$'
+          message: Use only lowercase letters, numbers, and dashes.
+      - name: client
+        label: Client / Company (bold line on card)
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: tag
+        label: Tag (small label, optional)
+        type: string
+      - name: color
+        label: Placeholder color (used only if no thumbnail)
+        type: select
+        options:
+          values: [bg-gray-200, bg-gray-300]
+        default: bg-gray-200
+      - name: site
+        label: Site / Location (optional)
+        type: string
+      - name: mapUrl
+        label: Google Maps link (optional)
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: role
+        label: Role
+        type: string
+      - name: team
+        label: Team
+        type: string
+      - name: duration
+        label: Duration
+        type: string
+      - name: tools
+        label: Tools
+        type: string
+        list: true
+      - name: thumbnail
+        label: Thumbnail image (shown on homepage)
+        type: image
+      - name: images
+        label: Images / Media (first one is the big hero image)
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Image or video file
+            type: image
+          - name: alt
+            label: Alt text (description for accessibility)
+            type: string
+          - name: caption
+            label: Caption (optional, shown under image)
+            type: string
+          - name: type
+            label: Type
+            type: select
+            options:
+              values: [image, video, slideshow]
+            default: image
+          - name: slideshow
+            label: Slideshow images (only if type = slideshow)
+            type: image
+            list: true
+          - name: slideshowInterval
+            label: Slideshow speed in ms (e.g. 3000 = 3s)
+            type: number
+          - name: slideshowTransition
+            label: Slideshow transition
+            type: select
+            options:
+              values: [crossfade, fade, none]
+          - name: transitionDuration
+            label: Transition duration in ms
+            type: number
