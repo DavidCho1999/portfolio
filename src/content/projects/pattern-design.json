@@ -1,0 +1,24 @@
+{
+  "order": 4,
+  "slug": "pattern-design",
+  "client": "Play",
+  "title": "Computational Design Lab",
+  "tag": "",
+  "color": "bg-gray-300",
+  "site": "",
+  "mapUrl": "",
+  "description": "Showcasing approx. 30 facade and structural concepts coded in Rhino Grasshopper. This collection blends reference studies with original designs, focusing on parametric optimization for both performance and aesthetics. The goal is to translate these computational methods into real-world architectural projects. (Instagram: https://www.instagram.com/arch_ghs)",
+  "role": "Computational Designer",
+  "team": "Self-Initiated",
+  "duration": "2024 - sometimes",
+  "tools": ["Grasshopper", "Rhino"],
+  "thumbnail": "/projects/desing_lab/thumbnail_photoshop.png",
+  "images": [
+    { "src": "/projects/desing_lab/thumbnail_photoshop.png", "alt": "Design Lab thumbnail" },
+    { "src": "/projects/desing_lab/1.png", "alt": "Design Lab pattern 1" },
+    { "src": "/projects/desing_lab/2.png", "alt": "Design Lab pattern 2" },
+    { "src": "/projects/desing_lab/3.png", "alt": "Design Lab pattern 3" },
+    { "src": "/projects/desing_lab/4.png", "alt": "Design Lab pattern 4" },
+    { "src": "/projects/desing_lab/5.png", "alt": "Design Lab pattern 5" }
+  ]
+}

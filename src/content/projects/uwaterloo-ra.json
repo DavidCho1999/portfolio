@@ -1,0 +1,19 @@
+{
+  "order": 6,
+  "slug": "uwaterloo-ra",
+  "client": "University of Waterloo",
+  "title": "Intern - Research Assistant",
+  "tag": "",
+  "color": "bg-gray-200",
+  "site": "Waterloo, ON",
+  "mapUrl": "",
+  "description": "Building Information Modeling management for University of Waterloo campus projects.",
+  "role": "BIM Manager",
+  "team": "University of Waterloo",
+  "duration": "2024 May-Aug / 2025 May-Aug",
+  "tools": ["Grasshopper"],
+  "thumbnail": "/projects/University_of_Waterloo/logo.png",
+  "images": [
+    { "src": "/projects/University_of_Waterloo/logo.png", "alt": "University of Waterloo logo" }
+  ]
+}

@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 export interface ProjectImage {
   src: string;
   alt: string;
@@ -12,7 +10,7 @@ export interface ProjectImage {
 }
 
 export interface Project {
-  site?: ReactNode;
+  site?: string;
   mapUrl?: string;
   id: number;
   slug: string;

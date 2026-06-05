@@ -1,0 +1,19 @@
+{
+  "order": 9,
+  "slug": "capstone",
+  "client": "Capstone Project",
+  "title": "BIM Coordination",
+  "tag": "",
+  "color": "bg-gray-200",
+  "site": "City of Gary",
+  "mapUrl": "",
+  "description": "Currently working on it.",
+  "role": "Architectural Lead",
+  "team": "Paul Yang, Druthi Padamati, Mithuna Kandasamy",
+  "duration": "8 Months",
+  "tools": ["Revit, Rhino, Grasshopper"],
+  "thumbnail": "/projects/capstone/Isometric SW.png",
+  "images": [
+    { "src": "/projects/capstone/Isometric SW.png", "alt": "Capstone Isometric View" }
+  ]
+}
