@@ -42,6 +42,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               src={project.thumbnailImage}
               alt={project.title}
               className="w-full h-auto"
+              loading="lazy"
             />
             {/* Hover effect */}
             <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100" />
