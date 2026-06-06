@@ -1,4 +1,17 @@
 import type { Project, ProjectImage } from './types.ts';
+import orderData from '../content/site/order.json';
+
+// Manual homepage order, set by dragging in the CMS (src/content/site/order.json).
+// Each entry references a project by slug. Projects not listed here fall back to
+// their numeric `order` field and appear after the manually-ordered ones.
+const orderedSlugs: string[] = (orderData.order ?? [])
+  .map((o) => o?.project)
+  .filter((slug): slug is string => typeof slug === 'string' && slug.length > 0);
+
+const slugRank = (slug: string): number => {
+  const i = orderedSlugs.indexOf(slug);
+  return i === -1 ? Number.POSITIVE_INFINITY : i;
+};
 
 // Shape of the editable JSON content files in src/content/projects/*.json.
 // These are what the CMS reads and writes; the app maps them to `Project`.
@@ -55,7 +68,12 @@ const modules = import.meta.glob<RawProject>('../content/projects/*.json', {
 });
 
 export const projects: Project[] = Object.values(modules)
-  .sort((a, b) => a.order - b.order)
+  .sort((a, b) => {
+    const ra = slugRank(a.slug);
+    const rb = slugRank(b.slug);
+    if (ra !== rb) return ra - rb; // manual drag-order wins
+    return a.order - b.order; // fallback for unlisted projects / ties
+  })
   .map((raw) => ({
     id: raw.order,
     slug: raw.slug,

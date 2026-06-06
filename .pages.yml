@@ -4,6 +4,25 @@ media:
   extensions: [png, jpg, jpeg, webp, gif, svg, mp4]
 
 content:
+  - name: homepage-order
+    label: Homepage order (drag to reorder)
+    type: file
+    path: src/content/site/order.json
+    format: json
+    fields:
+      - name: order
+        label: Projects — drag to reorder how they appear on the homepage
+        type: object
+        list: true
+        fields:
+          - name: project
+            label: Project
+            type: reference
+            options:
+              collection: projects
+              value: '{fields.slug}'
+              label: '{fields.title}'
+              search: 'fields.title'
   - name: info
     label: Info box (homepage)
     type: file
