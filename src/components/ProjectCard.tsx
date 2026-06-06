@@ -57,15 +57,15 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       {/* Project Text */}
       <div className="space-y-0">
         <div className="flex justify-between items-start">
-          <p className="text-sm font-bold text-black">
-            {project.client}
-          </p>
+          <h3 className="text-sm font-bold text-black">
+            {project.title}
+          </h3>
         </div>
 
         <div>
-          <h3 className="text-xs font-medium text-gray-500">
-            {project.title}
-          </h3>
+          <p className="text-xs font-medium text-gray-500">
+            {project.client}
+          </p>
         </div>
       </div>
     </Link>
