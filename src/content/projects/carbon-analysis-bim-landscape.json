@@ -3,7 +3,6 @@
   "slug": "carbon-analysis-bim-landscape",
   "client": "Office for the next environment",
   "title": "Harriman Campus Landscape/Climate Analysis",
-  "tag": "",
   "color": "bg-gray-200",
   "site": "Harriman Campus, NY",
   "mapUrl": "https://maps.app.goo.gl/BnEUk2y7KrPZar2K6",
@@ -11,12 +10,44 @@
   "role": "BIM Analyst",
   "team": "Office for the Next Environment",
   "duration": "2025",
-  "tools": ["Rhino", "Grasshopper", "Excel"],
+  "tools": [
+    "Rhino",
+    "Grasshopper",
+    "Excel"
+  ],
   "thumbnail": "/projects/harriman/thumbnail_1.png",
   "images": [
-    { "src": "/projects/harriman/thumbnail_1.png", "alt": "Harriman Campus thumbnail" },
-    { "src": "/projects/harriman/2WAY_IMAGES.png", "alt": "Harriman 2-way view 1" },
-    { "src": "/projects/harriman/2WAY_IMAGES2.png", "alt": "Harriman 2-way view 2" },
-    { "src": "/projects/harriman/2WAY_IMAGES3.png", "alt": "Harriman 2-way view 3" }
+    {
+      "src": "/projects/harriman/thumbnail_1.png",
+      "alt": "Harriman Campus thumbnail",
+      "type": "image"
+    },
+    {
+      "src": "/projects/1.png",
+      "alt": "Harriman 2-way view 1",
+      "type": "image"
+    },
+    {
+      "src": "/projects/2.png",
+      "alt": "Harriman 2-way view 2",
+      "type": "image"
+    },
+    {
+      "src": "/projects/3.png",
+      "alt": "Harriman 2-way view 3",
+      "type": "image"
+    },
+    {
+      "src": "/projects/4.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/5.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/6.png",
+      "type": "image"
+    }
   ]
 }
