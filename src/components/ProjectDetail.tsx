@@ -64,7 +64,7 @@ const ProjectDetail = () => {
         {project.images.length > 0 && project.images[0] && (
           <div className="mb-3">
             {project.images[0].type === 'video' ? (
-              <VideoPlayer src={project.images[0].src} />
+              <VideoPlayer src={project.images[0].video || project.images[0].src} />
             ) : project.images[0].type === 'slideshow' && project.images[0].slideshow ? (
               <Slideshow
                 images={project.images[0].slideshow}
@@ -160,7 +160,7 @@ const ProjectDetail = () => {
             {project.images.slice(1).map((image, index) => (
               <div key={index} className="space-y-0">
                 {image.type === 'video' ? (
-                  <VideoPlayer src={image.src} />
+                  <VideoPlayer src={image.video || image.src} />
                 ) : image.type === 'slideshow' && image.slideshow ? (
                   <Slideshow
                     images={image.slideshow}

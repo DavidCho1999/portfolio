@@ -7,6 +7,7 @@ interface RawImage {
   alt: string;
   caption?: string;
   type?: 'image' | 'video' | 'slideshow';
+  video?: string;
   slideshow?: string[];
   slideshowInterval?: number;
   slideshowTransition?: 'crossfade' | 'fade' | 'none';
@@ -43,6 +44,7 @@ const asset = (path: string): string => {
 const resolveImage = (img: RawImage): ProjectImage => ({
   ...img,
   src: asset(img.src),
+  video: img.video ? asset(img.video) : undefined,
   slideshow: img.slideshow?.map(asset),
 });
 

@@ -76,10 +76,13 @@ content:
         list: true
         fields:
           - name: src
-            label: Image or video file
+            label: Image (used when Type = image; leave empty for video)
+            type: image
+          - name: video
+            label: Video file (.mp4, only if Type = video)
             type: file
             options:
-              extensions: [png, jpg, jpeg, webp, gif, svg, mp4]
+              extensions: [mp4]
           - name: alt
             label: Alt text (description for accessibility)
             type: string

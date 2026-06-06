@@ -3,6 +3,7 @@ export interface ProjectImage {
   alt: string;
   caption?: string;
   type?: 'image' | 'video' | 'slideshow';
+  video?: string; // mp4 path, used when type === 'video'
   slideshow?: string[];
   slideshowInterval?: number; // in milliseconds, default 3000
   slideshowTransition?: 'crossfade' | 'fade' | 'none'; // transition type
