@@ -79,10 +79,10 @@ content:
           regex: '^[a-z0-9-]+$'
           message: Use only lowercase letters, numbers, and dashes.
       - name: client
-        label: Client / Company (bold line on card)
+        label: Client / Company (small line under the title on card)
         type: string
       - name: title
-        label: Title
+        label: Title (bold main line on card)
         type: string
       - name: tag
         label: Tag (small label, optional)
