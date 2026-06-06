@@ -1,0 +1,26 @@
+{
+  "order": 8,
+  "slug": "building-code-mcp",
+  "client": "Personal Project",
+  "title": "Building Code AI Implementation",
+  "color": "bg-gray-200",
+  "thumbnail": "/projects/Screenshot 2026-06-06 at 3.41.58 PM.png",
+  "images": [
+    {
+      "src": "/projects/Screenshot 2026-06-06 at 3.42.04 PM.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/Screenshot 2026-06-06 at 3.42.35 PM.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/Screenshot 2026-06-06 at 3.42.52 PM.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/Screenshot 2026-06-06 at 3.43.19 PM.png",
+      "type": "image"
+    }
+  ]
+}
