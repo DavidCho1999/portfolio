@@ -3,17 +3,21 @@
   "slug": "capstone",
   "client": "Capstone Project",
   "title": "BIM Coordination",
-  "tag": "",
   "color": "bg-gray-200",
-  "site": "City of Gary",
-  "mapUrl": "",
-  "description": "Currently working on it.",
+  "site": "Gary Methodist Church",
+  "mapUrl": "https://maps.app.goo.gl/z1PFymEVojUyPtBs7",
+  "description": "This project was developed during a 8-month academic studio. Our team designed a high-rise residential building entirely from scratch, integrating architectural, structural, and mechanical systems. The primary goals of the design were sustainability and climate resiliency.\n\nMy service:\n1. Managed BIM coordination for architectural, structural, and mechanical systems to resolve conflicts.\n2. Reviewed zoning laws and building codes to ensure the design followed all regulations.\n3. Collaborated with a teammate to analyze structural loads and determine the framework requirements.",
   "role": "Architectural Lead",
   "team": "Paul Yang, Druthi Padamati, Mithuna Kandasamy",
   "duration": "8 Months",
-  "tools": ["Revit, Rhino, Grasshopper"],
-  "thumbnail": "/projects/capstone/Isometric SW.png",
+  "tools": [
+    "Revit, Rhino, Grasshopper"
+  ],
+  "thumbnail": "/projects/Capstone_Poster-transformed.png",
   "images": [
-    { "src": "/projects/capstone/Isometric SW.png", "alt": "Capstone Isometric View" }
+    {
+      "alt": "Capstone Isometric View",
+      "type": "image"
+    }
   ]
 }
