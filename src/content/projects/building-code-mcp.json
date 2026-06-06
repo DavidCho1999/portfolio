@@ -6,10 +6,10 @@
   "color": "bg-gray-200",
   "description": "Building codes are massive and slow to search. Building Code MCP connects 16 Canadian codes (NBC, OBC, ABC, BCBC, the Quebec codes, and more, 24,000+ sections) to an AI assistant. You ask in plain language and get back the exact code, section, page, and on-page coordinates.\n\nThe key decision was not feeding the model the whole PDF. One code volume is 700k+ tokens, and all 16 don't fit in any context window. So the tool ships a lightweight location index and retrieves only the section that matters per query. That makes the full corpus searchable at all, at about 1/100th the token cost.\n\nIt also does two things a raw PDF can't. Every answer carries a verifiable citation (section and page you can check), instead of an invented one. And the public index stores only where a clause lives, never the protected text, so it's copyright safe. Connect your own licensed PDF and full text unlocks on top.",
   "duration": "Jan. 2026 - Feb. 2026",
-  "thumbnail": "/projects/Screenshot 2026-06-06 at 3.41.58 PM.png",
+  "thumbnail": "/projects/Screenshot 2026-06-06 at 3.41.58 PM-1.png",
   "images": [
     {
-      "src": "/projects/Screenshot 2026-06-06 at 3.42.04 PM.png",
+      "src": "/projects/Screenshot 2026-06-06 at 3.41.58 PM-2.png",
       "type": "image"
     },
     {
@@ -18,15 +18,15 @@
       "type": "video"
     },
     {
-      "src": "/projects/Screenshot 2026-06-06 at 3.42.35 PM.png",
+      "src": "/projects/Screenshot 2026-06-06 at 3.42.35 PM-1.png",
       "type": "image"
     },
     {
-      "src": "/projects/Screenshot 2026-06-06 at 3.42.52 PM.png",
+      "src": "/projects/Screenshot 2026-06-06 at 3.42.52 PM-1.png",
       "type": "image"
     },
     {
-      "src": "/projects/Screenshot 2026-06-06 at 3.43.19 PM.png",
+      "src": "/projects/Screenshot 2026-06-06 at 5.08.20 PM.png",
       "type": "image"
     }
   ]
