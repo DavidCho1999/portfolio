@@ -8,7 +8,7 @@
   "description": "Developing a parametric study of perforated façade designs in Grasshopper and ClimateStudio, varying perforation count,\nsize, and shape to evaluate trade-offs across daylighting (sDA, ASE, illuminance) and Energy Use Intensity (EUI).\n• Testing 1,000+ façade configurations and comparing their EUI against a baseline to quantify the energy impact of each\nperforation variant.\n• Authored a research paper for publication based on the simulation results.",
   "role": "BIM Manager",
   "team": "University of Waterloo",
-  "duration": "2024 May-Aug / 2025 May-Aug",
+  "duration": "2024 May-Aug / 2025 May-Present",
   "tools": [
     "Grasshopper"
   ],
