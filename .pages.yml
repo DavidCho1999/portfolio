@@ -77,7 +77,7 @@ content:
         fields:
           - name: src
             label: Image or video file
-            type: image
+            type: file
             options:
               extensions: [png, jpg, jpeg, webp, gif, svg, mp4]
           - name: alt
