@@ -1,12 +1,28 @@
 {
   "order": [
-    { "project": "climate-analysis" },
-    { "project": "carbon-analysis" },
-    { "project": "carbon-analysis-bim-landscape" },
-    { "project": "capstone" },
-    { "project": "project-8" },
-    { "project": "pattern-design" },
-    { "project": "building-code-mcp" },
-    { "project": "uwaterloo-ra" }
+    {
+      "project": "building-code-mcp"
+    },
+    {
+      "project": "climate-analysis"
+    },
+    {
+      "project": "carbon-analysis"
+    },
+    {
+      "project": "carbon-analysis-bim-landscape"
+    },
+    {
+      "project": "capstone"
+    },
+    {
+      "project": "project-8"
+    },
+    {
+      "project": "pattern-design"
+    },
+    {
+      "project": "uwaterloo-ra"
+    }
   ]
 }
