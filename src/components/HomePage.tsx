@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import Masonry from 'react-masonry-css';
 import ProjectCard from './ProjectCard.tsx';
 import { getAllProjects } from '../data/projects.ts';
+import { info } from '../data/info.ts';
 
 const HomePage = () => {
   const projects = getAllProjects();
@@ -64,72 +65,30 @@ const HomePage = () => {
                         ×
                       </button> */}
 
-                      {/* Modal content */}
+                      {/* Modal content — text & links are editable via Pages CMS (src/content/site/info.json) */}
                       <div className="space-y-1 text-sm">
-                        <p>Based in Waterloo, ON.</p>
-                        <p>Currently interested in Ai implementation design.</p>
+                        <p>{info.intro}</p>
+                        <p>{info.interest}</p>
                         <p>
-                          Previously at{' '}
-                          <a
-                            href="https://www.oftnarchitecture.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            // [변경 1] items-center -> items-baseline 으로 변경하여 텍스트 밑줄 기준으로 정렬
-                            className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
-                          >
-                            <span className="underline decoration-dotted underline-offset-2 decoration-black/30">OFTN</span>
-                            <svg
-                              // [변경 2] w-3 h-3 -> w-2 h-2 (크기를 작게)
-                              // [변경 3] relative -top-0.5 추가 (원래 위치보다 살짝 위로 올림)
-                              className="w-1.5 h-1.5 relative -top-1"
-                              viewBox="0 0 12 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                          </a>
-                          ,{' '}
-                          <a
-                            href="https://www.arcadis.com/en-ca/news/global/2022/9/arcadis-completes-the-acquisition-of-ibi-group"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
-                          >
-                            <span className="underline decoration-dotted underline-offset-2 decoration-black/30">Arcadis/IBI</span>
-                            <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                          </a>
-                          ,{' '}
-                          <a
-                            href="https://www.multi.studio/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
-                          >
-                            <span className="underline decoration-dotted underline-offset-2 decoration-black/30">Multistudio</span>
-                            <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                          </a>
-                          ,{' '}
-                          <a
-                            href="https://uwaterloo.ca/engineering/undergraduate-students/degree-enhancement/research-opportunities/ura"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
-                          >
-                            <span className="underline decoration-dotted underline-offset-2 decoration-black/30">University of Waterloo RA</span>
-                            <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                          </a>
-                          .
+                          {info.previouslyLabel}{' '}
+                          {info.links.map((link, i) => (
+                            <Fragment key={i}>
+                              <a
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:bg-yellow-200 transition-colors inline-flex items-baseline gap-0.5"
+                              >
+                                <span className="underline decoration-dotted underline-offset-2 decoration-black/30">{link.label}</span>
+                                <svg className="w-1.5 h-1.5 relative -top-1" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M3 1H11V9M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                              </a>
+                              {i < info.links.length - 1 ? ', ' : '.'}
+                            </Fragment>
+                          ))}
                         </p>
-                        <p>
-                          Skilled in BIM Management, AEC Automation, Modeling, Climate Analysis. 
-                        </p>
+                        <p>{info.skills}</p>
                       </div>
                     </div>
                   </>

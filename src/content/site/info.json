@@ -1,0 +1,24 @@
+{
+  "intro": "Based in Waterloo, ON.",
+  "interest": "Currently interested in Ai implementation design.",
+  "previouslyLabel": "Previously at",
+  "links": [
+    {
+      "label": "OFTN",
+      "url": "https://www.oftnarchitecture.com/"
+    },
+    {
+      "label": "Arcadis/IBI",
+      "url": "https://www.arcadis.com/en-ca/news/global/2022/9/arcadis-completes-the-acquisition-of-ibi-group"
+    },
+    {
+      "label": "Multistudio",
+      "url": "https://www.multi.studio/"
+    },
+    {
+      "label": "University of Waterloo RA",
+      "url": "https://uwaterloo.ca/engineering/undergraduate-students/degree-enhancement/research-opportunities/ura"
+    }
+  ],
+  "skills": "Skilled in BIM Management, AEC Automation, Modeling, Climate Analysis."
+}

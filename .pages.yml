@@ -4,6 +4,35 @@ media:
   extensions: [png, jpg, jpeg, webp, gif, svg, mp4]
 
 content:
+  - name: info
+    label: Info box (homepage)
+    type: file
+    path: src/content/site/info.json
+    format: json
+    fields:
+      - name: intro
+        label: Line 1 (location)
+        type: text
+      - name: interest
+        label: Line 2 (current interest)
+        type: text
+      - name: previouslyLabel
+        label: Intro before company links (e.g. "Previously at")
+        type: string
+      - name: links
+        label: Company links
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Name shown (e.g. OFTN)
+            type: string
+          - name: url
+            label: Link URL
+            type: string
+      - name: skills
+        label: Last line (skills)
+        type: text
   - name: projects
     label: Projects
     type: collection
