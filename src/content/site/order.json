@@ -1,13 +1,13 @@
 {
   "order": [
     {
+      "project": "carbon-analysis"
+    },
+    {
       "project": "building-code-mcp"
     },
     {
       "project": "climate-analysis"
-    },
-    {
-      "project": "carbon-analysis"
     },
     {
       "project": "carbon-analysis-bim-landscape"
