@@ -11,15 +11,50 @@
   "role": "Carbon Study",
   "team": "Office for the Next Environment",
   "duration": "2025",
-  "tools": ["Grasshopper", "Excel", "Python"],
+  "tools": [
+    "Grasshopper",
+    "Excel",
+    "Python"
+  ],
   "thumbnail": "/projects/carbon_calc/thumbnail.png",
   "images": [
-    { "src": "/projects/carbon_calc/thumbnail.png", "alt": "Carbon analysis thumbnail" },
-    { "src": "/projects/carbon_calc/1.png", "alt": "Carbon analysis image 1" },
-    { "src": "/projects/carbon_calc/2.png", "alt": "Carbon analysis image 2" },
-    { "src": "/projects/carbon_calc/3.png", "alt": "Carbon analysis image 3" },
-    { "src": "/projects/carbon_calc/4.png", "alt": "Carbon analysis image 4" },
-    { "src": "/projects/carbon_calc/5.png", "alt": "Carbon analysis image 5" },
-    { "src": "/projects/carbon_calc/7.png", "alt": "Carbon analysis image 7" }
+    {
+      "type": "image"
+    },
+    {
+      "src": "/projects/carbon_calc/thumbnail.png",
+      "alt": "Carbon analysis thumbnail",
+      "type": "image"
+    },
+    {
+      "src": "/projects/carbon_calc/1.png",
+      "alt": "Carbon analysis image 1",
+      "type": "image"
+    },
+    {
+      "src": "/projects/carbon_calc/2.png",
+      "alt": "Carbon analysis image 2",
+      "type": "image"
+    },
+    {
+      "src": "/projects/carbon_calc/3.png",
+      "alt": "Carbon analysis image 3",
+      "type": "image"
+    },
+    {
+      "src": "/projects/carbon_calc/4.png",
+      "alt": "Carbon analysis image 4",
+      "type": "image"
+    },
+    {
+      "src": "/projects/carbon_calc/5.png",
+      "alt": "Carbon analysis image 5",
+      "type": "image"
+    },
+    {
+      "src": "/projects/carbon_calc/7.png",
+      "alt": "Carbon analysis image 7",
+      "type": "image"
+    }
   ]
 }
