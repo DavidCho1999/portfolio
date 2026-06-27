@@ -19,12 +19,13 @@
   "thumbnail": "/projects/carbon_calc/thumbnail.png",
   "images": [
     {
+      "src": "/projects/carbon_calc/thumbnail.png",
       "video": "/projects/0626(1)-1.mp4",
+      "alt": "Carbon analysis thumbnail",
       "type": "image"
     },
     {
-      "src": "/projects/carbon_calc/thumbnail.png",
-      "alt": "Carbon analysis thumbnail",
+      "video": "/projects/0626(1)-1.mp4",
       "type": "image"
     },
     {
