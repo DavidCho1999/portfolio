@@ -8,8 +8,10 @@ const VideoPlayer = ({ src }: VideoPlayerProps) => {
       src={src}
       className="w-full h-auto"
       controls
+      autoPlay
+      muted
+      loop
       playsInline
-      preload="metadata"
     />
   );
 };
