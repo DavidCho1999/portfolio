@@ -1,0 +1,30 @@
+{
+  "order": 9,
+  "slug": "claude-code-templates",
+  "client": "Personal Project",
+  "title": "Claude Code AEC Templates",
+  "color": "bg-gray-200",
+  "thumbnail": "/projects/Screenshot 2026-06-27 at 11.29.18 PM.png",
+  "images": [
+    {
+      "src": "/projects/Screenshot 2026-06-27 at 11.29.18 PM-1.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/Screenshot 2026-06-27 at 11.32.26 PM.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/Screenshot 2026-06-27 at 11.32.48 PM.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/Screenshot 2026-06-27 at 11.32.15 PM.png",
+      "type": "image"
+    },
+    {
+      "src": "/projects/Screenshot 2026-06-27 at 11.32.05 PM.png",
+      "type": "image"
+    }
+  ]
+}
