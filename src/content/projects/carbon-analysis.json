@@ -20,13 +20,13 @@
   "images": [
     {
       "src": "/projects/carbon_calc/thumbnail.png",
-      "video": "/projects/0626(1)-1.mp4",
       "alt": "Carbon analysis thumbnail",
       "type": "image"
     },
     {
-      "video": "/projects/0626(1)-1.mp4",
-      "type": "image"
+      "src": "/projects/0626(1)-1.mp4",
+      "alt": "Chinatown Connection carbon analysis video",
+      "type": "video"
     },
     {
       "src": "/projects/carbon_calc/1.png",
