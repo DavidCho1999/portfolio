@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface SlideshowProps {
   images: string[];
@@ -20,12 +21,39 @@ const Slideshow = ({
   useEffect(() => {
     if (images.length <= 1) return;
 
-    const timer = setInterval(() => {
+    // Re-arm on each index change so manual navigation resets the timer.
+    const timer = setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, interval);
 
-    return () => clearInterval(timer);
-  }, [images.length, interval]);
+    return () => clearTimeout(timer);
+  }, [currentIndex, images.length, interval]);
+
+  const goToPrev = () =>
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  const goToNext = () =>
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+
+  const arrows = images.length > 1 && (
+    <>
+      <button
+        type="button"
+        aria-label="Previous image"
+        onClick={goToPrev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-9 h-9 rounded-full bg-white/70 hover:bg-white text-black transition-colors"
+      >
+        <ChevronLeft size={20} />
+      </button>
+      <button
+        type="button"
+        aria-label="Next image"
+        onClick={goToNext}
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-9 h-9 rounded-full bg-white/70 hover:bg-white text-black transition-colors"
+      >
+        <ChevronRight size={20} />
+      </button>
+    </>
+  );
 
   if (transition === 'crossfade') {
     return (
@@ -43,6 +71,7 @@ const Slideshow = ({
             }}
           />
         ))}
+        {arrows}
       </div>
     );
   }
@@ -55,6 +84,7 @@ const Slideshow = ({
         alt={`${alt} - ${currentIndex + 1}`}
         className="w-full h-auto"
       />
+      {arrows}
     </div>
   );
 };
