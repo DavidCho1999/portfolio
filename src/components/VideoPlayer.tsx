@@ -31,6 +31,7 @@ const VideoPlayer = ({ src, pauseDuration = 500 }: VideoPlayerProps) => {
       ref={videoRef}
       src={src}
       className="w-full h-auto"
+      controls
       autoPlay
       muted
       playsInline
