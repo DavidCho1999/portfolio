@@ -7,9 +7,6 @@
       "project": "building-code-mcp"
     },
     {
-      "project": "claude-code-templates"
-    },
-    {
       "project": "climate-analysis"
     },
     {
@@ -20,6 +17,9 @@
     },
     {
       "project": "capstone"
+    },
+    {
+      "project": "claude-code-templates"
     },
     {
       "project": "pattern-design"
